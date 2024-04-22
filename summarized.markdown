@@ -1,0 +1,2 @@
+| Column Type   | Min   | Max   | Mean   | Median   | Mode   | Percent Null   | Variance   | Standard Deviation   | Interquartile Range   | Coefficient of Variation   | Unique Values Count   |
+|---------------|-------|-------|--------|----------|--------|----------------|------------|----------------------|-----------------------|----------------------------|-----------------------|
