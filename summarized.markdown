@@ -1,2 +1,7 @@
-| Column Type   | Min   | Max   | Mean   | Median   | Mode   | Percent Null   | Variance   | Standard Deviation   | Interquartile Range   | Coefficient of Variation   | Unique Values Count   |
-|---------------|-------|-------|--------|----------|--------|----------------|------------|----------------------|-----------------------|----------------------------|-----------------------|
+| Column       | Type    |   Min |   Max |      Mean |   Median |   Mode |   % Zeros |   Variance |    Std Dev |   Interquartile Range |   Coefficient of Variation |   Distinct Values |
+|:-------------|:--------|------:|------:|----------:|---------:|-------:|----------:|-----------:|-----------:|----------------------:|---------------------------:|------------------:|
+| sepal-length | float64 |     0 |   7.9 |   4.838   |     5.8  |    0   |         0 |   6.3817   |   2.5262   |                   1.5 |                    52.2158 |                34 |
+| sepal-width  | float64 |     2 |   4.4 |   3.054   |     3    |    3   |         0 |   0.188004 |   0.433594 |                   0.5 |                    14.1976 |                23 |
+| petal-length | float64 |     1 |   6.9 |   3.75867 |     4.35 |    1.5 |         0 |   3.11318  |   1.76442  |                   3.5 |                    46.9427 |                43 |
+| petal-width  | float64 |     0 |   2.5 |   1.13733 |     1.3  |    0   |         0 |   0.673765 |   0.820832 |                   1.6 |                    72.1716 |                22 |
+| class        | object  |   nan | nan   | nan       |   nan    |  nan   |       nan | nan        | nan        |                 nan   |                   nan      |                 3 |
