@@ -2,7 +2,7 @@ import pandas as pd
 
 class Summarizer:
 
-    def __init__(self, dataframe:pd.DataFrame, output_type:str="xlsx", output_filename:str="summarized") -> None:
+    def __init__(self, dataframe:pd.DataFrame, output_type:str="markdown", output_filename:str="summarized") -> None:
         """
         Инициализирует объект обобщения заданным фреймом данных и настраивает желаемый тип выходных данных.
 
@@ -43,8 +43,12 @@ class Summarizer:
             # Если 'object', то вычисляем ограниченный набор сведений
             if col_type == 'object':
                 distinct_values = self.df[column].nunique()
+                mode_val = self.df[column].mode()[0]
+                percent_zeros = ((self.df[column].isnull().sum()) / (len(self.df[column]))) * 100
                 new_row = pd.DataFrame({'Column': [column],
                             'Type': [col_type],
+                            'Mode': [mode_val],
+                            '% Zeros': [percent_zeros],
                             'Distinct Values': [distinct_values]})
                 # Дополняем итоговый датафрейм
                 self.summary = pd.concat([self.summary if not self.summary.empty else None, new_row], ignore_index=True)
@@ -111,7 +115,7 @@ if __name__ == "__main__":
     df = pd.read_csv('iris_data.csv', names=headers)
     
     # Инициализируем объект
-    model = Summarizer(df, output_type="markdown")
+    model = Summarizer(df)
     # Вычисляем сведения
     model.calc_summary()
     # Сохраняем результат

@@ -1,34 +1,45 @@
 # Summarizer
-Background In data analysis we are operating with large dataframes, which can contain different types of data, such as binary, numeric, datetime and classification variables. Manual analysis of such dataframes is not efficient, and it could be very helpful to have some statistical overview of the dataframe.
+При анализе данных мы работаем с большими массивами данных, которые могут содержать различные типы данных, такие как двоичные, числовые, данные о времени и классификационные переменные. Ручной анализ таких фреймов данных неэффективен, и было бы очень полезно получить некоторый статистический обзор фрейма данных.
 
-## Task description
-The program should take pandas dataframe as input, iterate through each of the columns in the dataframe and based on column datatype, create summary statistics for each, and print them out in a table.
-Calculated summary could include following items:
-- column type;
-- min, max;
-- mean, median, mode;
-- percent of zero rows;
-- variance and standard deviation;
-- interquartile range and coefficient of variation;
-- number of distinct values;
-Feel free to add any other statistical measures if you find them useful.
+## Описание задачи
+Программа должна использовать фрейм данных pandas в качестве входных данных, выполнить итерацию по каждому столбцу фрейма данных и на основе типа данных столбца создать сводную статистику для каждого и распечатать ее в виде таблицы.
+Вычисляемая сводка может включать следующие элементы:
+- тип столбца;
+- минимальное, максимальное значение;
+- среднее, медиана, режим;
+- процент нулевых строк;
+- дисперсия и стандартное отклонение;
+- межквартильный диапазон и коэффициент вариации;
+- количество различных значений;
 
-## Input
-Pandas dataframe and options to customize output, for example:
-- output_type - markdown, html or xlsx
-- out filename
-- other options if needed
-Use IRIS dataset (https://archive.ics.uci.edu/ml/datasets/iris) as an example input.
+## Ввод
+Фрейм данных Pandas и параметры для настройки вывода, например:
+- output_type - "markdown", "html" или "xlsx";
+- output_filename - имя выводимого файла без расширения(Например: "summarized");
+Используется набор данных IRIS (https://archive.ics.uci.edu/ml/datasets/iris) в качестве примера ввода.
 
-## Output
-A markdown, html or xlsx report with summary statistics
-What needs to be done
-- Create python project
-- Use OOP approach
-- Test the solution
-- Add README file
-- Add requirements.txt file
-- Do not ‘overengineer’ your solution Technical requirements
-- Python 3.9 or higher
-- Pandas
-You’re allowed to use Open Source libraries and frameworks of your choice. We must be able to run your program simply by using Python and pip. We won't be able to evaluate your solution if it depends on proprietary libraries we don't have licences for. 
+## Вывод
+Отчет markdown, html или xlsx со сводной статистикой.
+
+## Реализовано
+- Проект на python
+- Использован ООП-подход
+- Решение протестировано
+- Добавлен файл README
+- Добавлен файл requirements.txt
+- Python 3.10.10
+- Pandas 2.2.2
+
+## Пример использования
+```
+# Зададим названия колонок для датафрейма
+headers = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
+df = pd.read_csv('iris_data.csv', names=headers)
+
+# Инициализируем объект
+model = Summarizer(df)
+# Вычисляем сведения
+model.calc_summary()
+# Сохраняем результат
+model.output_save()
+```

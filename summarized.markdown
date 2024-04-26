@@ -1,7 +1,7 @@
-| Column       | Type    |   Min |   Max |      Mean |   Median |   Mode |   % Zeros |   Variance |    Std Dev |   Interquartile Range |   Coefficient of Variation |   Distinct Values |
-|:-------------|:--------|------:|------:|----------:|---------:|-------:|----------:|-----------:|-----------:|----------------------:|---------------------------:|------------------:|
-| sepal-length | float64 |     0 |   7.9 |   4.838   |     5.8  |    0   |         0 |   6.3817   |   2.5262   |                   1.5 |                    52.2158 |                34 |
-| sepal-width  | float64 |     2 |   4.4 |   3.054   |     3    |    3   |         0 |   0.188004 |   0.433594 |                   0.5 |                    14.1976 |                23 |
-| petal-length | float64 |     1 |   6.9 |   3.75867 |     4.35 |    1.5 |         0 |   3.11318  |   1.76442  |                   3.5 |                    46.9427 |                43 |
-| petal-width  | float64 |     0 |   2.5 |   1.13733 |     1.3  |    0   |         0 |   0.673765 |   0.820832 |                   1.6 |                    72.1716 |                22 |
-| class        | object  |   nan | nan   | nan       |   nan    |  nan   |       nan | nan        | nan        |                 nan   |                   nan      |                 3 |
+| Column       | Type    |   Min |   Max |      Mean |   Median | Mode        |   % Zeros |   Variance |    Std Dev |   Interquartile Range |   Coefficient of Variation |   Distinct Values |
+|:-------------|:--------|------:|------:|----------:|---------:|:------------|----------:|-----------:|-----------:|----------------------:|---------------------------:|------------------:|
+| sepal-length | float64 |   4.3 |   7.9 |   5.84333 |     5.8  | 5.0         |         0 |   0.685694 |   0.828066 |                   1.3 |                    14.1711 |                35 |
+| sepal-width  | float64 |   2   |   4.4 |   3.054   |     3    | 3.0         |         0 |   0.188004 |   0.433594 |                   0.5 |                    14.1976 |                23 |
+| petal-length | float64 |   1   |   6.9 |   3.75867 |     4.35 | 1.5         |         0 |   3.11318  |   1.76442  |                   3.5 |                    46.9427 |                43 |
+| petal-width  | float64 |   0.1 |   2.5 |   1.19867 |     1.3  | 0.2         |         0 |   0.582414 |   0.763161 |                   1.5 |                    63.6675 |                22 |
+| class        | object  | nan   | nan   | nan       |   nan    | Iris-setosa |         0 | nan        | nan        |                 nan   |                   nan      |                 3 |
